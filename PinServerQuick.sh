@@ -25,13 +25,13 @@ function addSystemdService(){
 	\nAfter=network-online.target
 	\n\n[Service]
 	\nType=simple
+	\nWorkingDirectory=${curDir}
 	\nExecStart=${curDir}/${serverName}
 	\n\n[Install]
 	\nWantedBy=multi-user.target
 	\n"
 
-	if [[ -e ${systemdServiceDir} ]]; then
-	else
+	if [[ ! -e ${systemdServiceDir} ]]; then
 		mkdir ${systemdServiceDir}
 	fi
 
@@ -131,7 +131,6 @@ function installServer(){
 	fi
 
 	chmod +x ${serverName}
-	./${serverName}
 
 	addSystemdService
 	addFirewallService
