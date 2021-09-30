@@ -5,7 +5,7 @@
 
 ```
 # linux
-$ curl -o PinServer -L https://raw.githubusercontent.com/spxvszero/PinServer/main/PinServerQuick.sh && chmod +x PinServerQuick.sh
+$ curl -o PinServerQuick.sh -L https://raw.githubusercontent.com/spxvszero/PinServer/main/PinServerQuick.sh && chmod +x PinServerQuick.sh
 $ sh PinServerQuick.sh
 
 # windows
